@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.cache/
+*.egg-info/
+build/
+dist/
+.DS_Store
+# local embedding caches
+*.npy
+!results/*.npy
+# private data must never be committed
+data/*.jsonl
+*.parquet
+interest_top10.jsonl

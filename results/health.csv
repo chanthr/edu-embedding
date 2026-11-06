@@ -1,0 +1,5 @@
+model,dim,mean_cos_random_pairs,std_cos_random_pairs,top_pc_variance_share,top10_pc_variance_share
+edu-v1,768,0.0261,0.1141,0.0387,0.2812
+bge-base-en-v1.5,768,0.6153,0.0596,0.0564,0.3477
+bge-small-en-v1.5,384,0.7089,0.0579,0.0641,0.3891
+all-MiniLM-L6-v2,384,0.3517,0.129,0.0672,0.3865

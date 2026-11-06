@@ -1,0 +1,40 @@
+{"id": "q01", "query": "biology but with computers", "acceptable": ["life-sciences", "computer-science", "data-science"]}
+{"id": "q02", "query": "I like math and building things", "acceptable": ["engineering-science", "math-statistics", "computer-science"]}
+{"id": "q03", "query": "i want to be a doctor", "acceptable": ["medicine-health", "life-sciences"]}
+{"id": "q04", "query": "how the brain works", "acceptable": ["psychology-neurosci", "life-sciences", "medicine-health"]}
+{"id": "q05", "query": "making money in the stock market", "acceptable": ["business-finance", "economics", "math-statistics"]}
+{"id": "q06", "query": "coding and making video games", "acceptable": ["computer-science", "art-design", "engineering-science", "data-science"]}
+{"id": "q07", "query": "drawing, painting and design", "acceptable": ["art-design"]}
+{"id": "q08", "query": "climate change and saving the environment", "acceptable": ["life-sciences", "social-sciences", "engineering-science"]}
+{"id": "q09", "query": "human rights and justice", "acceptable": ["law-legal", "social-sciences", "humanities"]}
+{"id": "q10", "query": "politics and how governments work", "acceptable": ["social-sciences", "humanities", "economics"]}
+{"id": "q11", "query": "ancient history and old civilisations", "acceptable": ["humanities"]}
+{"id": "q12", "query": "learning foreign languages", "acceptable": ["humanities"]}
+{"id": "q13", "query": "I want to teach kids", "acceptable": ["education", "psychology-neurosci"]}
+{"id": "q14", "query": "AI and robots", "acceptable": ["data-science", "computer-science", "engineering-science"]}
+{"id": "q15", "query": "stats and data", "acceptable": ["data-science", "math-statistics"]}
+{"id": "q16", "query": "pure maths and proofs", "acceptable": ["math-statistics"]}
+{"id": "q17", "query": "physics and space", "acceptable": ["life-sciences", "engineering-science", "math-statistics"]}
+{"id": "q18", "query": "chemistry experiments in the lab", "acceptable": ["life-sciences", "engineering-science", "medicine-health"]}
+{"id": "q19", "query": "animals and becoming a vet", "acceptable": ["medicine-health", "life-sciences"]}
+{"id": "q20", "query": "starting my own business someday", "acceptable": ["business-finance", "economics"]}
+{"id": "q21", "query": "marketing and social media", "acceptable": ["business-finance", "art-design", "social-sciences"]}
+{"id": "q22", "query": "film and photography", "acceptable": ["art-design"]}
+{"id": "q23", "query": "i play piano and love music", "acceptable": ["art-design"]}
+{"id": "q24", "query": "designing buildings", "acceptable": ["art-design", "engineering-science"]}
+{"id": "q25", "query": "cars and engines", "acceptable": ["engineering-science"]}
+{"id": "q26", "query": "electronics and circuits", "acceptable": ["engineering-science", "computer-science"]}
+{"id": "q27", "query": "cyber security and hacking", "acceptable": ["computer-science", "engineering-science", "data-science"]}
+{"id": "q28", "query": "why people commit crimes", "acceptable": ["social-sciences", "law-legal", "psychology-neurosci"]}
+{"id": "q29", "query": "economics but not too much maths", "acceptable": ["economics", "business-finance", "social-sciences"]}
+{"id": "q30", "query": "accounting", "acceptable": ["business-finance"]}
+{"id": "q31", "query": "writing stories and reading novels", "acceptable": ["humanities", "art-design"]}
+{"id": "q32", "query": "philosophy and the big questions", "acceptable": ["humanities"]}
+{"id": "q33", "query": "public health and stopping pandemics", "acceptable": ["medicine-health", "life-sciences"]}
+{"id": "q34", "query": "nutrition and sport", "acceptable": ["medicine-health", "life-sciences"]}
+{"id": "q35", "query": "how cities are planned", "acceptable": ["social-sciences", "engineering-science", "art-design"]}
+{"id": "q36", "query": "journalism and the news", "acceptable": ["social-sciences", "art-design", "humanities"]}
+{"id": "q37", "query": "genes and dna", "acceptable": ["life-sciences", "medicine-health"]}
+{"id": "q38", "query": "helping people with mental health problems", "acceptable": ["psychology-neurosci", "medicine-health", "social-sciences"]}
+{"id": "q39", "query": "international relations and diplomacy", "acceptable": ["social-sciences", "humanities"]}
+{"id": "q40", "query": "fintech, money and computers", "acceptable": ["business-finance", "computer-science", "data-science", "economics"]}

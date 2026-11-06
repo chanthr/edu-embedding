@@ -1,0 +1,54 @@
+{
+  "eyebrow": "EMBEDDING MODEL",
+  "title": "Edu Embedding",
+  "subtitle": "Match student interests to university programs",
+  "wave": "aurora",
+  "animate": true,
+  "steps": [
+    {
+      "who": "Query",
+      "title": "Analyze",
+      "desc": "Label the query and pick the fusion weights"
+    },
+    {
+      "who": "Index",
+      "title": "Retrieve",
+      "desc": "Dense search and BM25 over 3,863 passages"
+    },
+    {
+      "who": "Model",
+      "title": "Rerank",
+      "desc": "A cross-encoder rescores the top passages"
+    },
+    {
+      "who": "Filters",
+      "title": "Filter",
+      "desc": "Lexical guard and taxonomy keep fitting programs"
+    },
+    {
+      "who": "Programs",
+      "title": "Rank",
+      "desc": "Section weights, a cap per university, MMR"
+    }
+  ],
+  "badges": [
+    {
+      "file": "badge-python",
+      "label": "python",
+      "message": "3.10+",
+      "color": "info"
+    },
+    {
+      "file": "badge-model",
+      "label": "model",
+      "message": "edu-v1",
+      "color": "#8250DF"
+    },
+    {
+      "file": "badge-eval",
+      "label": "eval",
+      "message": "re-run",
+      "color": "neutral"
+    }
+  ]
+}

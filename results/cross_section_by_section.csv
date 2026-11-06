@@ -1,0 +1,12 @@
+model,query,overview,core_modules,skills,capstone,outcomes
+BM25 (no model),plain,0.7294,0.5589,0.498,0.3735,0.2842
+edu-v1,plain,0.8917,0.7645,0.7497,0.5034,0.4398
+edu-v1,template,0.8011,0.7524,0.797,0.525,0.4858
+bge-base-en-v1.5,plain,0.6522,0.6279,0.4763,0.2355,0.2639
+bge-base-en-v1.5,template,0.4993,0.6522,0.6509,0.3613,0.2598
+bge-base-en-v1.5 +instr,plain,0.5318,0.6725,0.4208,0.2124,0.2395
+bge-base-en-v1.5 +instr,template,0.475,0.6861,0.5846,0.2991,0.2449
+bge-small-en-v1.5,plain,0.6103,0.6279,0.5074,0.1367,0.3545
+bge-small-en-v1.5,template,0.5873,0.5345,0.6387,0.2828,0.3829
+all-MiniLM-L6-v2,plain,0.7415,0.6725,0.5575,0.387,0.3654
+all-MiniLM-L6-v2,template,0.6387,0.6346,0.7645,0.4168,0.2517

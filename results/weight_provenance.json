@@ -1,0 +1,41 @@
+{
+  "edu-v1 vs bge-base-en-v1.5": {
+    "tensors_compared": 199,
+    "tensors_in_tuned_model": 199,
+    "overall_relative_diff": 0.006408163014479922,
+    "relative_diff_by_block": {
+      "embeddings.LayerNorm": 0.0,
+      "embeddings.position_embeddings": 0.0,
+      "embeddings.token_type_embeddings": 0.0,
+      "embeddings.word_embeddings": 0.0,
+      "encoder.layer.00": 0.0,
+      "encoder.layer.01": 0.0,
+      "encoder.layer.02": 0.0,
+      "encoder.layer.03": 0.0,
+      "encoder.layer.04": 0.0,
+      "encoder.layer.05": 0.0,
+      "encoder.layer.06": 0.0,
+      "encoder.layer.07": 0.0,
+      "encoder.layer.08": 0.011915000965563942,
+      "encoder.layer.09": 0.01091834430586811,
+      "encoder.layer.10": 0.011330286126863685,
+      "encoder.layer.11": 0.01570977876934616,
+      "pooler.dense": 0.0
+    },
+    "identical_blocks": [
+      "embeddings.LayerNorm",
+      "embeddings.position_embeddings",
+      "embeddings.token_type_embeddings",
+      "embeddings.word_embeddings",
+      "encoder.layer.00",
+      "encoder.layer.01",
+      "encoder.layer.02",
+      "encoder.layer.03",
+      "encoder.layer.04",
+      "encoder.layer.05",
+      "encoder.layer.06",
+      "encoder.layer.07",
+      "pooler.dense"
+    ]
+  }
+}

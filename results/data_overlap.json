@@ -1,0 +1,14 @@
+{
+  "private split 1": {
+    "validation_triplets_also_in_training": 0.042163882259347654,
+    "validation_anchors_also_in_training": 0.5147175815433572,
+    "validation_positives_seen_as_training_passages": 1.0,
+    "corpus_passages_seen_as_training_passages": 0.977219777375097
+  },
+  "private split 2": {
+    "validation_triplets_also_in_training": 0.0,
+    "validation_anchors_also_in_training": 0.06371911573472042,
+    "validation_positives_seen_as_training_passages": 0.9947984395318595,
+    "corpus_passages_seen_as_training_passages": 0.9961170075071188
+  }
+}

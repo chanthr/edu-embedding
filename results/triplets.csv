@@ -1,0 +1,9 @@
+model,split,accuracy,mean_cos_pos,mean_cos_neg,mean_margin
+edu-v1,private split 1,0.9718,0.478,0.0563,0.4218
+edu-v1,private split 2,0.9814,0.3498,0.0007,0.3491
+bge-base-en-v1.5,private split 1,0.963,0.7826,0.6244,0.1581
+bge-base-en-v1.5,private split 2,0.9476,0.7156,0.6061,0.1095
+bge-small-en-v1.5,private split 1,0.9443,0.8204,0.7039,0.1165
+bge-small-en-v1.5,private split 2,0.9267,0.7821,0.6945,0.0876
+all-MiniLM-L6-v2,private split 1,0.9324,0.6436,0.4072,0.2363
+all-MiniLM-L6-v2,private split 2,0.9111,0.5623,0.3686,0.1937

@@ -1,0 +1,9 @@
+{
+  "model": "Saved production embeddings (old repository, not included)",
+  "file_sha256": "1bdae3a3a4b70ae5659b402872912f7dd0b7316f834510e0b7916edbeeecffbd",
+  "dim": 768,
+  "mean_cos_random_pairs": 0.47025471990158285,
+  "std_cos_random_pairs": 0.8812542742540783,
+  "top_pc_variance_share": 0.9981415886414896,
+  "top10_pc_variance_share": 0.999778331644075
+}

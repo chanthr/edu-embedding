@@ -1,0 +1,709 @@
+{
+  "environment": {
+    "date_utc": "2026-11-06 18:29",
+    "device": "mps",
+    "platform": "Darwin arm64",
+    "versions": {
+      "python": "3.12.11",
+      "numpy": "2.5.4",
+      "torch": "2.15.0",
+      "sentence-transformers": "6.2.0",
+      "transformers": "5.22.2",
+      "rank-bm25": "0.2.2",
+      "huggingface-hub": "2.4.0",
+      "edu-embedding": "0.1.0"
+    },
+    "seed": 0,
+    "corpus_sha256": "9d3e8757d4239d6b41721281b90243f70db52c91da9a379cb015ca61da0d8344",
+    "models": {
+      "edu-v1": {
+        "id": "ongilLabs/edu-v1",
+        "revision": "9794538567f6f0ba5ea5b7637d01e06c7ab024d0",
+        "query_prefix": ""
+      },
+      "bge-base-en-v1.5": {
+        "id": "BAAI/bge-base-en-v1.5",
+        "revision": "a5beb1e3e68b9ab74eb54cfd186867f64f240e1a",
+        "query_prefix": ""
+      },
+      "bge-base-en-v1.5 +instr": {
+        "id": "BAAI/bge-base-en-v1.5",
+        "revision": "a5beb1e3e68b9ab74eb54cfd186867f64f240e1a",
+        "query_prefix": "Represent this sentence for searching relevant passages: "
+      },
+      "bge-small-en-v1.5": {
+        "id": "BAAI/bge-small-en-v1.5",
+        "revision": "5c38ec7c405ec4b44b94cc5a9bb96e735b38267a",
+        "query_prefix": ""
+      },
+      "all-MiniLM-L6-v2": {
+        "id": "sentence-transformers/all-MiniLM-L6-v2",
+        "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+        "query_prefix": ""
+      }
+    },
+    "rerank_model": {
+      "id": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+      "revision": "233902d25c440f23af6f7d6e94d2946bac0bee0a"
+    },
+    "triplet_files_sha256": {}
+  },
+  "data_overlap": {
+    "private split 1": {
+      "validation_triplets_also_in_training": 0.042163882259347654,
+      "validation_anchors_also_in_training": 0.5147175815433572,
+      "validation_positives_seen_as_training_passages": 1.0,
+      "corpus_passages_seen_as_training_passages": 0.977219777375097
+    },
+    "private split 2": {
+      "validation_triplets_also_in_training": 0.0,
+      "validation_anchors_also_in_training": 0.06371911573472042,
+      "validation_positives_seen_as_training_passages": 0.9947984395318595,
+      "corpus_passages_seen_as_training_passages": 0.9961170075071188
+    }
+  },
+  "weight_provenance": {
+    "edu-v1 vs bge-base-en-v1.5": {
+      "tensors_compared": 199,
+      "tensors_in_tuned_model": 199,
+      "overall_relative_diff": 0.006408163014479922,
+      "relative_diff_by_block": {
+        "embeddings.LayerNorm": 0.0,
+        "embeddings.position_embeddings": 0.0,
+        "embeddings.token_type_embeddings": 0.0,
+        "embeddings.word_embeddings": 0.0,
+        "encoder.layer.00": 0.0,
+        "encoder.layer.01": 0.0,
+        "encoder.layer.02": 0.0,
+        "encoder.layer.03": 0.0,
+        "encoder.layer.04": 0.0,
+        "encoder.layer.05": 0.0,
+        "encoder.layer.06": 0.0,
+        "encoder.layer.07": 0.0,
+        "encoder.layer.08": 0.011915000965563942,
+        "encoder.layer.09": 0.01091834430586811,
+        "encoder.layer.10": 0.011330286126863685,
+        "encoder.layer.11": 0.01570977876934616,
+        "pooler.dense": 0.0
+      },
+      "identical_blocks": [
+        "embeddings.LayerNorm",
+        "embeddings.position_embeddings",
+        "embeddings.token_type_embeddings",
+        "embeddings.word_embeddings",
+        "encoder.layer.00",
+        "encoder.layer.01",
+        "encoder.layer.02",
+        "encoder.layer.03",
+        "encoder.layer.04",
+        "encoder.layer.05",
+        "encoder.layer.06",
+        "encoder.layer.07",
+        "pooler.dense"
+      ]
+    }
+  },
+  "triplets": [
+    {
+      "model": "edu-v1",
+      "split": "private split 1",
+      "accuracy": 0.97175815433572,
+      "mean_cos_pos": 0.478004515171051,
+      "mean_cos_neg": 0.056252483278512955,
+      "mean_margin": 0.42175206542015076
+    },
+    {
+      "model": "edu-v1",
+      "split": "private split 2",
+      "accuracy": 0.9813610749891634,
+      "mean_cos_pos": 0.3498077392578125,
+      "mean_cos_neg": 0.0006581402849406004,
+      "mean_margin": 0.349149614572525
+    },
+    {
+      "model": "bge-base-en-v1.5",
+      "split": "private split 1",
+      "accuracy": 0.9630071599045346,
+      "mean_cos_pos": 0.7825663685798645,
+      "mean_cos_neg": 0.624417781829834,
+      "mean_margin": 0.15814858675003052
+    },
+    {
+      "model": "bge-base-en-v1.5",
+      "split": "private split 2",
+      "accuracy": 0.9475509319462505,
+      "mean_cos_pos": 0.7156153917312622,
+      "mean_cos_neg": 0.6061413884162903,
+      "mean_margin": 0.10947400331497192
+    },
+    {
+      "model": "bge-small-en-v1.5",
+      "split": "private split 1",
+      "accuracy": 0.9443118536197295,
+      "mean_cos_pos": 0.8203799724578857,
+      "mean_cos_neg": 0.7038719654083252,
+      "mean_margin": 0.11650795489549637
+    },
+    {
+      "model": "bge-small-en-v1.5",
+      "split": "private split 2",
+      "accuracy": 0.9267446900736888,
+      "mean_cos_pos": 0.7821248769760132,
+      "mean_cos_neg": 0.6945390105247498,
+      "mean_margin": 0.08758578449487686
+    },
+    {
+      "model": "all-MiniLM-L6-v2",
+      "split": "private split 1",
+      "accuracy": 0.9323786793953859,
+      "mean_cos_pos": 0.6435580849647522,
+      "mean_cos_neg": 0.4072125256061554,
+      "mean_margin": 0.2363455593585968
+    },
+    {
+      "model": "all-MiniLM-L6-v2",
+      "split": "private split 2",
+      "accuracy": 0.9111400086692675,
+      "mean_cos_pos": 0.5622947812080383,
+      "mean_cos_neg": 0.3685690462589264,
+      "mean_margin": 0.19372572004795074
+    }
+  ],
+  "cross_section": [
+    {
+      "model": "BM25 (no model)",
+      "query": "plain",
+      "n_queries": 3695,
+      "recall@1": 0.15805142083897158,
+      "recall@5": 0.38565629228687415,
+      "recall@10": 0.48876860622462787,
+      "mrr@10": 0.25344255428829177
+    },
+    {
+      "model": "edu-v1",
+      "query": "plain",
+      "n_queries": 3695,
+      "recall@1": 0.18863328822733424,
+      "recall@5": 0.5012178619756428,
+      "recall@10": 0.6698240866035182,
+      "mrr@10": 0.3226965869794016
+    },
+    {
+      "model": "edu-v1",
+      "query": "template",
+      "n_queries": 3695,
+      "recall@1": 0.20324763193504736,
+      "recall@5": 0.5090663058186738,
+      "recall@10": 0.6722598105548038,
+      "mrr@10": 0.33398543720600554
+    },
+    {
+      "model": "bge-base-en-v1.5",
+      "query": "plain",
+      "n_queries": 3695,
+      "recall@1": 0.0925575101488498,
+      "recall@5": 0.3047361299052774,
+      "recall@10": 0.45115020297699593,
+      "mrr@10": 0.18523970616663446
+    },
+    {
+      "model": "bge-base-en-v1.5",
+      "query": "template",
+      "n_queries": 3695,
+      "recall@1": 0.10148849797023005,
+      "recall@5": 0.3326116373477673,
+      "recall@10": 0.48470906630581867,
+      "mrr@10": 0.20139978950533755
+    },
+    {
+      "model": "bge-base-en-v1.5 +instr",
+      "query": "plain",
+      "n_queries": 3695,
+      "recall@1": 0.08606224627875507,
+      "recall@5": 0.27550744248985115,
+      "recall@10": 0.41542625169147496,
+      "mrr@10": 0.16994297312971196
+    },
+    {
+      "model": "bge-base-en-v1.5 +instr",
+      "query": "template",
+      "n_queries": 3695,
+      "recall@1": 0.10013531799729364,
+      "recall@5": 0.3155615696887686,
+      "recall@10": 0.45791610284167794,
+      "mrr@10": 0.1940772601327405
+    },
+    {
+      "model": "bge-small-en-v1.5",
+      "query": "plain",
+      "n_queries": 3695,
+      "recall@1": 0.09499323410013531,
+      "recall@5": 0.2998646820027064,
+      "recall@10": 0.447361299052774,
+      "mrr@10": 0.18521962325751232
+    },
+    {
+      "model": "bge-small-en-v1.5",
+      "query": "template",
+      "n_queries": 3695,
+      "recall@1": 0.09634641407307172,
+      "recall@5": 0.32422192151556156,
+      "recall@10": 0.48525033829499326,
+      "mrr@10": 0.19576153961810253
+    },
+    {
+      "model": "all-MiniLM-L6-v2",
+      "query": "plain",
+      "n_queries": 3695,
+      "recall@1": 0.13017591339648174,
+      "recall@5": 0.3986468200270636,
+      "recall@10": 0.5447902571041948,
+      "mrr@10": 0.24260959683828426
+    },
+    {
+      "model": "all-MiniLM-L6-v2",
+      "query": "template",
+      "n_queries": 3695,
+      "recall@1": 0.14857916102841678,
+      "recall@5": 0.40920162381596753,
+      "recall@10": 0.5412719891745602,
+      "mrr@10": 0.2576943316794467
+    }
+  ],
+  "cross_section_by_section_recall@10": [
+    {
+      "model": "BM25 (no model)",
+      "query": "plain",
+      "overview": 0.7293640054127198,
+      "core_modules": 0.5588633288227334,
+      "skills": 0.4979702300405954,
+      "capstone": 0.37347767253044656,
+      "outcomes": 0.28416779431664413
+    },
+    {
+      "model": "edu-v1",
+      "query": "plain",
+      "overview": 0.8917456021650879,
+      "core_modules": 0.7645466847090663,
+      "skills": 0.7496617050067659,
+      "capstone": 0.503382949932341,
+      "outcomes": 0.4397834912043302
+    },
+    {
+      "model": "edu-v1",
+      "query": "template",
+      "overview": 0.8010825439783491,
+      "core_modules": 0.7523680649526387,
+      "skills": 0.79702300405954,
+      "capstone": 0.5250338294993234,
+      "outcomes": 0.4857916102841678
+    },
+    {
+      "model": "bge-base-en-v1.5",
+      "query": "plain",
+      "overview": 0.652232746955345,
+      "core_modules": 0.6278755074424899,
+      "skills": 0.476319350473613,
+      "capstone": 0.2354533152909337,
+      "outcomes": 0.2638700947225981
+    },
+    {
+      "model": "bge-base-en-v1.5",
+      "query": "template",
+      "overview": 0.4993234100135318,
+      "core_modules": 0.652232746955345,
+      "skills": 0.6508795669824087,
+      "capstone": 0.36129905277401897,
+      "outcomes": 0.2598105548037889
+    },
+    {
+      "model": "bge-base-en-v1.5 +instr",
+      "query": "plain",
+      "overview": 0.5317997293640054,
+      "core_modules": 0.6725304465493911,
+      "skills": 0.4208389715832206,
+      "capstone": 0.2124492557510149,
+      "outcomes": 0.2395128552097429
+    },
+    {
+      "model": "bge-base-en-v1.5 +instr",
+      "query": "template",
+      "overview": 0.4749661705006766,
+      "core_modules": 0.6860622462787551,
+      "skills": 0.584573748308525,
+      "capstone": 0.29905277401894453,
+      "outcomes": 0.2449255751014885
+    },
+    {
+      "model": "bge-small-en-v1.5",
+      "query": "plain",
+      "overview": 0.6102841677943166,
+      "core_modules": 0.6278755074424899,
+      "skills": 0.5074424898511503,
+      "capstone": 0.13667117726657646,
+      "outcomes": 0.35453315290933696
+    },
+    {
+      "model": "bge-small-en-v1.5",
+      "query": "template",
+      "overview": 0.5872801082543978,
+      "core_modules": 0.5345060893098782,
+      "skills": 0.638700947225981,
+      "capstone": 0.2828146143437077,
+      "outcomes": 0.38294993234100133
+    },
+    {
+      "model": "all-MiniLM-L6-v2",
+      "query": "plain",
+      "overview": 0.7415426251691475,
+      "core_modules": 0.6725304465493911,
+      "skills": 0.557510148849797,
+      "capstone": 0.3870094722598105,
+      "outcomes": 0.36535859269282817
+    },
+    {
+      "model": "all-MiniLM-L6-v2",
+      "query": "template",
+      "overview": 0.638700947225981,
+      "core_modules": 0.6346414073071719,
+      "skills": 0.7645466847090663,
+      "capstone": 0.4167794316644114,
+      "outcomes": 0.2516914749661705
+    }
+  ],
+  "interest": [
+    {
+      "model": "edu-v1",
+      "setting": "dense, plain query",
+      "n_queries": 40,
+      "precision@10": 0.9175000000000001,
+      "precision@10_ci95_low": 0.8775000000000001,
+      "precision@10_ci95_high": 0.9524999999999999,
+      "precision_of_returned": 0.9175000000000001,
+      "unique_unis@10": 6.625,
+      "returned": 10.0
+    },
+    {
+      "model": "edu-v1",
+      "setting": "dense, production template",
+      "n_queries": 40,
+      "precision@10": 0.8925000000000001,
+      "precision@10_ci95_low": 0.8399999999999999,
+      "precision@10_ci95_high": 0.9350000000000002,
+      "precision_of_returned": 0.8925000000000001,
+      "unique_unis@10": 6.85,
+      "returned": 10.0
+    },
+    {
+      "model": "edu-v1",
+      "setting": "full recommender",
+      "n_queries": 40,
+      "precision@10": 0.6975,
+      "precision@10_ci95_low": 0.58,
+      "precision@10_ci95_high": 0.8099999999999999,
+      "precision_of_returned": 0.9239285714285714,
+      "unique_unis@10": 5.4,
+      "returned": 7.5
+    },
+    {
+      "model": "bge-base-en-v1.5",
+      "setting": "dense, plain query",
+      "n_queries": 40,
+      "precision@10": 0.9475000000000001,
+      "precision@10_ci95_low": 0.9199999999999999,
+      "precision@10_ci95_high": 0.9724999999999999,
+      "precision_of_returned": 0.9475000000000001,
+      "unique_unis@10": 6.425,
+      "returned": 10.0
+    },
+    {
+      "model": "bge-base-en-v1.5",
+      "setting": "dense, production template",
+      "n_queries": 40,
+      "precision@10": 0.8675,
+      "precision@10_ci95_low": 0.8100000000000002,
+      "precision@10_ci95_high": 0.9175000000000001,
+      "precision_of_returned": 0.8675,
+      "unique_unis@10": 6.225,
+      "returned": 10.0
+    },
+    {
+      "model": "bge-base-en-v1.5",
+      "setting": "full recommender",
+      "n_queries": 40,
+      "precision@10": 0.71,
+      "precision@10_ci95_low": 0.5925,
+      "precision@10_ci95_high": 0.82,
+      "precision_of_returned": 0.9441666666666666,
+      "unique_unis@10": 5.375,
+      "returned": 7.6
+    },
+    {
+      "model": "bge-base-en-v1.5 +instr",
+      "setting": "dense, plain query",
+      "n_queries": 40,
+      "precision@10": 0.9425000000000001,
+      "precision@10_ci95_low": 0.9100000000000001,
+      "precision@10_ci95_high": 0.9700000000000001,
+      "precision_of_returned": 0.9425000000000001,
+      "unique_unis@10": 6.675,
+      "returned": 10.0
+    },
+    {
+      "model": "bge-base-en-v1.5 +instr",
+      "setting": "dense, production template",
+      "n_queries": 40,
+      "precision@10": 0.8800000000000001,
+      "precision@10_ci95_low": 0.8325000000000001,
+      "precision@10_ci95_high": 0.9225,
+      "precision_of_returned": 0.8800000000000001,
+      "unique_unis@10": 6.6,
+      "returned": 10.0
+    },
+    {
+      "model": "bge-base-en-v1.5 +instr",
+      "setting": "full recommender",
+      "n_queries": 40,
+      "precision@10": 0.7150000000000001,
+      "precision@10_ci95_low": 0.6025,
+      "precision@10_ci95_high": 0.8225,
+      "precision_of_returned": 0.9430555555555555,
+      "unique_unis@10": 5.475,
+      "returned": 7.7
+    },
+    {
+      "model": "bge-small-en-v1.5",
+      "setting": "dense, plain query",
+      "n_queries": 40,
+      "precision@10": 0.9425000000000001,
+      "precision@10_ci95_low": 0.9174999999999999,
+      "precision@10_ci95_high": 0.9675,
+      "precision_of_returned": 0.9425000000000001,
+      "unique_unis@10": 6.375,
+      "returned": 10.0
+    },
+    {
+      "model": "bge-small-en-v1.5",
+      "setting": "dense, production template",
+      "n_queries": 40,
+      "precision@10": 0.9025000000000001,
+      "precision@10_ci95_low": 0.8425,
+      "precision@10_ci95_high": 0.9500624999999996,
+      "precision_of_returned": 0.9025000000000001,
+      "unique_unis@10": 5.9,
+      "returned": 10.0
+    },
+    {
+      "model": "bge-small-en-v1.5",
+      "setting": "full recommender",
+      "n_queries": 40,
+      "precision@10": 0.7275,
+      "precision@10_ci95_low": 0.615,
+      "precision@10_ci95_high": 0.8300624999999997,
+      "precision_of_returned": 0.9733333333333333,
+      "unique_unis@10": 5.45,
+      "returned": 7.5
+    },
+    {
+      "model": "all-MiniLM-L6-v2",
+      "setting": "dense, plain query",
+      "n_queries": 40,
+      "precision@10": 0.9325000000000001,
+      "precision@10_ci95_low": 0.8950000000000001,
+      "precision@10_ci95_high": 0.9650000000000001,
+      "precision_of_returned": 0.9325000000000001,
+      "unique_unis@10": 6.275,
+      "returned": 10.0
+    },
+    {
+      "model": "all-MiniLM-L6-v2",
+      "setting": "dense, production template",
+      "n_queries": 40,
+      "precision@10": 0.8925000000000001,
+      "precision@10_ci95_low": 0.835,
+      "precision@10_ci95_high": 0.9400000000000001,
+      "precision_of_returned": 0.8925000000000001,
+      "unique_unis@10": 6.225,
+      "returned": 10.0
+    },
+    {
+      "model": "all-MiniLM-L6-v2",
+      "setting": "full recommender",
+      "n_queries": 40,
+      "precision@10": 0.7150000000000001,
+      "precision@10_ci95_low": 0.6025,
+      "precision@10_ci95_high": 0.8200624999999997,
+      "precision_of_returned": 0.9483333333333335,
+      "unique_unis@10": 5.35,
+      "returned": 7.65
+    }
+  ],
+  "health": [
+    {
+      "model": "edu-v1",
+      "dim": 768,
+      "mean_cos_random_pairs": 0.02613037419547291,
+      "std_cos_random_pairs": 0.11407574082325096,
+      "top_pc_variance_share": 0.038672404304225486,
+      "top10_pc_variance_share": 0.281186704800143
+    },
+    {
+      "model": "bge-base-en-v1.5",
+      "dim": 768,
+      "mean_cos_random_pairs": 0.6152719616298999,
+      "std_cos_random_pairs": 0.05960117178680082,
+      "top_pc_variance_share": 0.056361679636257794,
+      "top10_pc_variance_share": 0.34765963500343017
+    },
+    {
+      "model": "bge-small-en-v1.5",
+      "dim": 384,
+      "mean_cos_random_pairs": 0.7089254493736911,
+      "std_cos_random_pairs": 0.0579170147785985,
+      "top_pc_variance_share": 0.06414293570464538,
+      "top10_pc_variance_share": 0.38914888088658883
+    },
+    {
+      "model": "all-MiniLM-L6-v2",
+      "dim": 384,
+      "mean_cos_random_pairs": 0.35167750505687634,
+      "std_cos_random_pairs": 0.12903872448609166,
+      "top_pc_variance_share": 0.06724407417566661,
+      "top10_pc_variance_share": 0.3864564722338898
+    }
+  ],
+  "ablation": [
+    {
+      "model": "edu-v1",
+      "step": "Dense only",
+      "n_queries": 40,
+      "precision@10": 0.9075,
+      "precision@10_ci95_low": 0.8424999999999999,
+      "precision@10_ci95_high": 0.9575000000000001,
+      "precision_of_returned": 0.9075,
+      "unique_unis@10": 6.675,
+      "returned": 10.0
+    },
+    {
+      "model": "edu-v1",
+      "step": "BM25 only",
+      "n_queries": 40,
+      "precision@10": 0.7725000000000001,
+      "precision@10_ci95_low": 0.6775,
+      "precision@10_ci95_high": 0.8550000000000001,
+      "precision_of_returned": 0.8393750000000001,
+      "unique_unis@10": 5.55,
+      "returned": 9.05
+    },
+    {
+      "model": "edu-v1",
+      "step": "Hybrid (dense + BM25)",
+      "n_queries": 40,
+      "precision@10": 0.915,
+      "precision@10_ci95_low": 0.8574999999999999,
+      "precision@10_ci95_high": 0.96,
+      "precision_of_returned": 0.915,
+      "unique_unis@10": 6.35,
+      "returned": 10.0
+    },
+    {
+      "model": "edu-v1",
+      "step": "+ lexical guard and taxonomy filter",
+      "n_queries": 40,
+      "precision@10": 0.6975,
+      "precision@10_ci95_low": 0.575,
+      "precision@10_ci95_high": 0.8099999999999999,
+      "precision_of_returned": 0.9239285714285714,
+      "unique_unis@10": 4.925,
+      "returned": 7.5
+    },
+    {
+      "model": "edu-v1",
+      "step": "+ per-university cap and MMR",
+      "n_queries": 40,
+      "precision@10": 0.6975,
+      "precision@10_ci95_low": 0.58,
+      "precision@10_ci95_high": 0.8099999999999999,
+      "precision_of_returned": 0.9239285714285714,
+      "unique_unis@10": 5.35,
+      "returned": 7.5
+    },
+    {
+      "model": "edu-v1",
+      "step": "+ cross-encoder rerank (production defaults)",
+      "n_queries": 40,
+      "precision@10": 0.6975,
+      "precision@10_ci95_low": 0.58,
+      "precision@10_ci95_high": 0.8099999999999999,
+      "precision_of_returned": 0.9239285714285714,
+      "unique_unis@10": 5.4,
+      "returned": 7.5
+    },
+    {
+      "model": "bge-base-en-v1.5",
+      "step": "Dense only",
+      "n_queries": 40,
+      "precision@10": 0.8925000000000001,
+      "precision@10_ci95_low": 0.8399999999999999,
+      "precision@10_ci95_high": 0.9375,
+      "precision_of_returned": 0.8925000000000001,
+      "unique_unis@10": 6.075,
+      "returned": 10.0
+    },
+    {
+      "model": "bge-base-en-v1.5",
+      "step": "BM25 only",
+      "n_queries": 40,
+      "precision@10": 0.7725000000000001,
+      "precision@10_ci95_low": 0.6775,
+      "precision@10_ci95_high": 0.8550000000000001,
+      "precision_of_returned": 0.8393750000000001,
+      "unique_unis@10": 5.55,
+      "returned": 9.05
+    },
+    {
+      "model": "bge-base-en-v1.5",
+      "step": "Hybrid (dense + BM25)",
+      "n_queries": 40,
+      "precision@10": 0.9175000000000001,
+      "precision@10_ci95_low": 0.8775000000000001,
+      "precision@10_ci95_high": 0.9549999999999998,
+      "precision_of_returned": 0.9175000000000001,
+      "unique_unis@10": 6.25,
+      "returned": 10.0
+    },
+    {
+      "model": "bge-base-en-v1.5",
+      "step": "+ lexical guard and taxonomy filter",
+      "n_queries": 40,
+      "precision@10": 0.7125,
+      "precision@10_ci95_low": 0.5974999999999999,
+      "precision@10_ci95_high": 0.8225,
+      "precision_of_returned": 0.9466666666666665,
+      "unique_unis@10": 5.025,
+      "returned": 7.6
+    },
+    {
+      "model": "bge-base-en-v1.5",
+      "step": "+ per-university cap and MMR",
+      "n_queries": 40,
+      "precision@10": 0.71,
+      "precision@10_ci95_low": 0.5925,
+      "precision@10_ci95_high": 0.82,
+      "precision_of_returned": 0.9441666666666666,
+      "unique_unis@10": 5.3,
+      "returned": 7.6
+    },
+    {
+      "model": "bge-base-en-v1.5",
+      "step": "+ cross-encoder rerank (production defaults)",
+      "n_queries": 40,
+      "precision@10": 0.71,
+      "precision@10_ci95_low": 0.5925,
+      "precision@10_ci95_high": 0.82,
+      "precision_of_returned": 0.9441666666666666,
+      "unique_unis@10": 5.375,
+      "returned": 7.6
+    }
+  ]
+}
