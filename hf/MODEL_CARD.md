@@ -43,7 +43,7 @@ The card does not name a base model, so we compared the weights directly. The em
 
 ## Intended use
 
-Ranking passages about university programs against short English queries written by students. It works best inside a retrieval pipeline that also uses keyword search. See the edu-embedding repository for the pipeline. It was built on a private corpus of undergraduate programs at universities in the UK, Hong Kong and Singapore.
+Ranking passages about university programs against short English queries written by students. It works best inside a retrieval pipeline that also uses keyword search. See the [edu-embedding repository](https://github.com/chanthr/edu-embedding) for the pipeline. It was built on a private corpus of undergraduate programs at universities in the UK, Hong Kong and Singapore.
 
 Not intended for:
 
@@ -66,7 +66,7 @@ The fine-tuning triplets are private. Two candidate triplet sets exist, both gen
 
 ## Evaluation
 
-All numbers come from the edu-embedding repository (`edu-embedding eval`), on Apple MPS with seed 0 and pinned revisions. Baselines: BAAI/bge-base-en-v1.5, BAAI/bge-small-en-v1.5 and sentence-transformers/all-MiniLM-L6-v2. The corpus and the triplet splits are private.
+All numbers come from the [edu-embedding repository](https://github.com/chanthr/edu-embedding) (`edu-embedding eval`), on Apple MPS with seed 0 and pinned revisions. Baselines: BAAI/bge-base-en-v1.5, BAAI/bge-small-en-v1.5 and sentence-transformers/all-MiniLM-L6-v2. The corpus and the triplet splits are private.
 
 **A. Triplet accuracy.** Share of validation triplets where cos(anchor, positive) is higher than cos(anchor, negative).
 

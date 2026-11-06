@@ -164,7 +164,7 @@ The corpus is not included. Bring a JSONL file of program passages in the format
 
 The first run downloads the model and embeds the corpus. Later runs read the cached embeddings from `~/.cache/edu-embedding`.
 
-The default model, `ongilLabs/edu-v1`, is private for now. Until it is published you need a Hugging Face token with access (`huggingface-cli login`). Any public sentence-transformers model works in its place:
+The default model is [`ongilLabs/edu-v1`](https://huggingface.co/ongilLabs/edu-v1) on Hugging Face. Any other sentence-transformers model works in its place:
 
 ```bash
 export EDU_EMBED_CORPUS=path/to/programs.jsonl
@@ -215,7 +215,7 @@ The index is built at runtime. For a corpus of a few thousand passages, a brute-
 
 | Model | Base model (measured from the weights) | Size | Status |
 |---|---|---|---|
-| [ongilLabs/edu-v1](https://huggingface.co/ongilLabs/edu-v1) | BAAI/bge-base-en-v1.5. Embeddings and layers 0 to 7 are bit-identical to it; layers 8 to 11 differ by 1.1 to 1.6% | 110M parameters, 768 dimensions | Private for now. It will be published on Hugging Face. |
+| [ongilLabs/edu-v1](https://huggingface.co/ongilLabs/edu-v1) | BAAI/bge-base-en-v1.5. Embeddings and layers 0 to 7 are bit-identical to it; layers 8 to 11 differ by 1.1 to 1.6% | 110M parameters, 768 dimensions | Public on Hugging Face, with a [model card](https://huggingface.co/ongilLabs/edu-v1) |
 
 No training code exists. The edu-v1 card describes a triplet loss with an alignment term and a variance term, trained on private triplets built from the program corpus. That description comes from the author and has not been verified.
 
@@ -249,7 +249,7 @@ This rewrites `results/`. Every data input comes from a flag; nothing is downloa
 | `--cluster-overrides PATH` | Part C | Optional hand labels for programs whose names match no taxonomy keyword: `{"labels": {"<university> \| <program>": ["cluster", ...]}}`. Without it such programs never count as acceptable. |
 | `--details-dir PATH` | Part C | Optional. Per-query top-10 lists contain corpus text, so they are written only here. Keep it outside the repository. |
 
-Model revisions are pinned in `src/edu_embedding/evaluation/config.py`. The seed is fixed at 0. Scores can differ in the last digit between CPU, CUDA and Apple MPS. The published numbers were produced on Apple MPS, with the private corpus, two private triplet splits and a private overrides file. The default model is private until it is published. Use `--models` and `--parts` to run a subset.
+Model revisions are pinned in `src/edu_embedding/evaluation/config.py`. The seed is fixed at 0. Scores can differ in the last digit between CPU, CUDA and Apple MPS. The published numbers were produced on Apple MPS, with the private corpus, two private triplet splits and a private overrides file. Use `--models` and `--parts` to run a subset.
 
 | Part | What it measures | File |
 |---|---|---|
